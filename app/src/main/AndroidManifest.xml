@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.demoanu">
+    <uses-sdk tools:overrideLibrary="com.truecaller.android.sdk"/>
+
+<!--   For Android 8 and above :-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_CALL_LOG"/>
+    <uses-permission android:name="android.permission.ANSWER_PHONE_CALLS"/>
+
+
+<!--    For Android 7 and below :-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_CALL_LOG"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.example.demoanu.Common.LoginSignup.ForgetPasswordSuccessMessage" />
+        <activity android:name="com.example.demoanu.Common.LoginSignup.SetNewPassword" />
+        <activity android:name="com.example.demoanu.Common.LoginSignup.MakeSelection" />
+        <activity android:name="com.example.demoanu.Common.LoginSignup.ForgetPassword" />
+        <activity android:name="com.example.demoanu.Common.LoginSignup.VerifyOTP" />
+        <activity android:name="com.example.demoanu.Common.LoginSignup.SignUp3rdClass" />
+        <activity android:name="com.example.demoanu.Common.LoginSignup.SignUp2ndClass" />
+        <activity android:name="com.example.demoanu.Common.LoginSignup.SignUp" />
+        <activity android:name="com.example.demoanu.Common.LoginSignup.Login" />
+        <activity android:name="com.example.demoanu.Common.LoginSignup.RetailerStartScreen" />
+        <activity android:name="com.example.demoanu.User.AllCategories" />
+        <activity android:name="com.example.demoanu.Common.OnBoarding" />
+        <activity android:name="com.example.demoanu.User.UserDashboard" />
+        <activity android:name="com.example.demoanu.Common.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+        <meta-data android:name="com.truecaller.android.sdk.PartnerKey" android:value="@string/partnerKey"/>
+    </application>
+
+</manifest>
